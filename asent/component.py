@@ -1,4 +1,4 @@
-"""Calculation of various readability metrics."""
+"""Spacy 3.0 extension for lexicon-based sentiment analysis."""
 
 from spacy.tokens import Token, Doc, Span
 from spacy.language import Language
@@ -45,8 +45,8 @@ class Asent:
             intensifiers (Dict[str, float], optional): A dictionary of intensifiers (e.g. {"very": 0.293}). Defaults to {}, indicating no intensifiers is used.
             negations (Iterable[str], optional): A list of negations (e..g "not"). Defaults to an empty set indicatin no negations will be used.
             contrastive_conjugations (Iterable[str], optional): A list of contrastive conjugations (e.g. "but"). Defaults to empty set indicating no contrastive conjugations will be used.
-            lowercase (bool, optional): Should be text be lowercases before looking up in the lexicons? Defaults to True.
-            lemmatize (bool, optional): Should be text be lemmatized before looking up in the lexicons? Defaults to False.
+            lowercase (bool, optional): Should the text be lowercases before looking up in the lexicons? Defaults to True.
+            lemmatize (bool, optional): Should the text be lemmatized before looking up in the lexicons? Defaults to False.
             force (bool, optional): Should existing extensions be overwritten? Defaults to False.
         """
         self.name = name
